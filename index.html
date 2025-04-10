@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Medivio – moderní zdravotní péče</title>
+        <link rel="stylesheet" href="style.css" />
+      
+        <!-- Základní metadata -->
+        <meta name="description" content="Medivio poskytuje všeobecné lékařské služby, fyzioterapii a diagnostiku v Praze.">
+        <meta name="author" content="ČZU tým">
+      
+        <!-- Open Graph (pro sdílení na sociálních sítích) -->
+        <meta property="og:title" content="Medivio – moderní zdravotní péče">
+        <meta property="og:description" content="Komplexní zdravotní péče pro celou rodinu v srdci Prahy.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://medivio.cz">
+        <meta property="og:image" content="https://medivio.cz/assets/og-image.jpg">
+      
+    </head>      
+<body>
+    <header class="navbar" itemscope itemtype="https://schema.org/MedicalOrganization">
+        <div class="logo" itemprop="name">MEDIVIO</div>
+        
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-actions">
+          <a href="#" class="btn primary">Přihlásit se</a>
+        </div>
+    </header>
+
+    <section id="uvod" class="hero">
+        <div class="hero-content">
+          <h1>Vítejte v Medivio Clinic</h1>
+          <p>Moderní zdravotní centrum zaměřené na prevenci, diagnostiku, fyzioterapii a výživu – vše pod jednou střechou.</p>
+          <a href="#kontakt" class="btn primary">Objednat se</a>
+        </div>
+    </section>
+
+    <section id="onas">
+        <div class="container">
+          <h2>O nás</h2>
+          <article>
+            <p>Jsme soukromé zdravotní centrum nabízející komplexní péči pro celou rodinu. Náš tým tvoří zkušení lékaři a specialisté.</p>
+          </article>
+        </div>
+    </section>
+
+    <section id="sluzby">
+        <div class="container">
+          <h2>Naše služby</h2>
+          <article class="sluzba">
+            <h3>Nutriční poradenství</h3>
+            <p>Individuální konzultace s nutričním terapeutem pro redukci hmotnosti, úpravu jídelníčku nebo řešení specifických potřeb (např. sportovní výživa, intolerance).</p>
+            <a href="#" class="btn primary">Rezervovat termín</a>
+          </article>
+          <article class="sluzba">
+            <h3>Fyzioterapie</h3>
+            <p>Rehabilitace pohybového aparátu, cvičení po úrazech nebo operacích. Spolupracujeme s profesionály s dlouholetou praxí.</p>
+            <a href="#" class="btn primary">Rezervovat termín</a>
+          </article>
+          <article class="sluzba">
+            <h3>Prevence a základní diagnostika</h3>
+            <p>Preventivní vyšetření, EKG, měření tlaku, laboratorní odběry a konzultace výsledků. Vhodné pro dospělé i děti.</p>
+            <a href="#" class="btn primary">Rezervovat termín</a>
+          </article>
+        </div>
+    </section>
+
+    <section id="oteviraci-doba">
+        <div class="container">
+          <h2>Otevírací doba</h2>
+          <ul>
+            <li><span class="micro-text">Pondělí–Pátek</span>: <time datetime="08:00">8:00</time> – <time datetime="17:00">17:00</time></li>
+            <li><span class="micro-text">Sobota</span>: <time datetime="09:00">9:00</time> – <time datetime="12:00">12:00</time></li>
+            <li><span class="micro-text">Neděle</span>: zavřeno</li>
+          </ul>
+        </div>
+    </section>
+
+    <section id="novinky">
+        <div class="container">
+          <h2>Novinky</h2>
+          <article>
+            <h3>Nový fyzioterapeut v týmu</h3>
+            <p><span class="micro-text">Publikováno 1. dubna 2025</span></p>
+            <p>Jsme přivítali nového kolegu se specializací na rehabilitaci po úrazech.</p>
+          </article>
+          <article>
+            <h3>Rozšířená pracovní doba</h3>
+            <p><span class="micro-text">Publikováno 15. března 2025</span></p>
+            <p>Prodloužili jsme provozní dobu ve čtvrtek až do 19:00.</p>
+          </article>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+          <h2>Kontakt</h2>
+          <p>Pokud máte nějaké dotazy nebo potřebujete více informací, neváhejte nás kontaktovat.</p>
+          <address>
+            <p><strong>Adresa:</strong> Ulice 123, 100 00 Praha</p>
+            <p><strong>Telefon:</strong> <a href="tel:+420123456789">+420 123 456 789</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:info@medivio.cz">info@medivio.cz</a></p>
+          </address>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-column">
+          <h3>Kontakt</h3>
+          <p class="micro-text">Sídlo společnosti</p>
+          <address itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+            <span itemprop="streetAddress">Ulice 123</span><br>
+            <span itemprop="postalCode">100 00</span> <span itemprop="addressLocality">Praha</span><br>
+            Tel: <a href="tel:+420123456789" itemprop="telephone">+420 123 456 789</a><br>
+            E-mail: <a href="mailto:info@medivio.cz" itemprop="email">info@medivio.cz</a>
+          </address>
+        </div>
+
+        <div class="footer-column">
+          <h3>Rychlé odkazy</h3>
+          <ul>
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Sledujte nás</h3>
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

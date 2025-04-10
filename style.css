@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }  
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EAF6FF;
+    color: #172121;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* -----------------HERO ÚVODNÍ SEKCE----------------- */
+  .hero {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("assets/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 100px 20px 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+  }
+  
+  .hero .btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+  
+  /* ODKAZY */
+  a {
+    color: #009FFD;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #007ac6;
+  }
+  
+  /* -----------------HEADER a NAVBAR----------------- */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #009FFD;
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* -----------------SLUŽBY----------------- */
+  #sluzby {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .sluzba {
+    background-color: white;
+    border-left: 5px solid #009FFD;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  .sluzba:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .sluzba h3 {
+    margin-bottom: 10px;
+  }
+  
+  .sluzba p {
+    margin-bottom: 15px;
+  }
+  
+  #sluzby, #novinky, #onas {
+    padding-top: 40px;
+  }
+  
+  /* -----------------TLAČÍTKA----------------- */
+  .btn {
+    padding: 12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn.primary {
+    background-color: #009FFD;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #007ac6;
+    transform: translateY(-1px);
+  }
+  
+  .btn.secondary {
+    background-color: white;
+    color: #1e1e2f;
+    border: 2px solid #009FFD;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #f0f0f0;
+    color: #009FFD;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* -----------------SEKCE & BOXY----------------- */
+  section, aside {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+  }
+  
+  /* -----------------FOOTER----------------- */
+  footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  footer h3 {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  footer a {
+    color: #009FFD;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
