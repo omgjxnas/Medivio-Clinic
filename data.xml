@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
-<link rel="stylesheet" type="text/xslt" href="transfromation.xslt" />
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="sluzby.xsd">
     <service>
         <id>1</id>
         <name>Nutriční terapeut</name>
@@ -9,47 +9,44 @@
             <price currency="CZK">800</price>
             <duration unit="minutes">60</duration>
             <availability>Volné termíny</availability>
+            <specialization>Nutriční poradenství</specialization>
+            <rating>4.8</rating>
+            <location>
+                <city>Praha</city>
+                <street>Ulice zdraví 1</street>
+            </location>
         </details>
     </service>
     <service>
         <id>2</id>
-        <name>Fyzioterapeut</name>
+        <name>Fyzioterapie</name>
         <details>
-            <category>Zdraví</category>
-            <price currency="CZK">900</price>
+            <category>Rehabilitace</category>
+            <price currency="CZK">1000</price>
             <duration unit="minutes">45</duration>
-            <availability>Na objednávku</availability>
+            <availability>Objednání nutné</availability>
+            <specialization>Ortopedie</specialization>
+            <rating>4.5</rating>
+            <location>
+                <city>Brno</city>
+                <street>Ulice pohybu 2</street>
+            </location>
         </details>
     </service>
     <service>
         <id>3</id>
-        <name>Masáže</name>
+        <name>Psychologické poradenství</name>
         <details>
-            <category>Relaxace</category>
-            <price currency="CZK">600</price>
-            <duration unit="minutes">60</duration>
-            <availability>Na skladě</availability>
+            <category>Psychologie</category>
+            <price currency="CZK">1200</price>
+            <duration unit="minutes">50</duration>
+            <availability>Každý pátek</availability>
+            <specialization>Klinická psychologie</specialization>
+            <rating>5.0</rating>
+            <location>
+                <city>Ostrava</city>
+                <street>Duhová 33</street>
+            </location>
         </details>
     </service>
-    <service>
-        <id>4</id>
-        <name>Diabetolog</name>
-        <details>
-            <category>Zdraví</category>
-            <price currency="CZK">1100</price>
-            <duration unit="minutes">90</duration>
-            <availability>Volné termíny</availability>
-        </details>
-    </service>
-    <service>
-        <id>5</id>
-        <name>Kardiologie</name>
-        <details>
-            <category>Zdraví</category>
-            <price currency="CZK">1500</price>
-            <duration unit="minutes">60</duration>
-            <availability>Na objednávku</availability>
-        </details>
-    </service>
-</data>
-
+</services>
