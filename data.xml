@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<link rel="stylesheet" type="text/xslt" href="transfromation.xslt" />
+    <service>
+        <id>1</id>
+        <name>Nutriční terapeut</name>
+        <details>
+            <category>Zdraví</category>
+            <price currency="CZK">800</price>
+            <duration unit="minutes">60</duration>
+            <availability>Volné termíny</availability>
+        </details>
+    </service>
+    <service>
+        <id>2</id>
+        <name>Fyzioterapeut</name>
+        <details>
+            <category>Zdraví</category>
+            <price currency="CZK">900</price>
+            <duration unit="minutes">45</duration>
+            <availability>Na objednávku</availability>
+        </details>
+    </service>
+    <service>
+        <id>3</id>
+        <name>Masáže</name>
+        <details>
+            <category>Relaxace</category>
+            <price currency="CZK">600</price>
+            <duration unit="minutes">60</duration>
+            <availability>Na skladě</availability>
+        </details>
+    </service>
+    <service>
+        <id>4</id>
+        <name>Diabetolog</name>
+        <details>
+            <category>Zdraví</category>
+            <price currency="CZK">1100</price>
+            <duration unit="minutes">90</duration>
+            <availability>Volné termíny</availability>
+        </details>
+    </service>
+    <service>
+        <id>5</id>
+        <name>Kardiologie</name>
+        <details>
+            <category>Zdraví</category>
+            <price currency="CZK">1500</price>
+            <duration unit="minutes">60</duration>
+            <availability>Na objednávku</availability>
+        </details>
+    </service>
+</data>
+

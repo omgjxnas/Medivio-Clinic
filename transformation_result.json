@@ -1,0 +1,79 @@
+{
+    "services": [
+        {
+            "id": "3",
+            "name": "Masáže",
+            "category": "Relaxace",
+            "price": {
+                "value": "600",
+                "currency": "CZK"
+            },
+            "duration": {
+                "value": "60",
+                "unit": "minutes"
+            },
+            "availability": "Na skladě",
+            "priority": "Standardní"
+        },
+        {
+            "id": "1",
+            "name": "Nutriční terapeut",
+            "category": "Zdraví",
+            "price": {
+                "value": "800",
+                "currency": "CZK"
+            },
+            "duration": {
+                "value": "60",
+                "unit": "minutes"
+            },
+            "availability": "Volné termíny",
+            "priority": "Standardní"
+        },
+        {
+            "id": "2",
+            "name": "Fyzioterapeut",
+            "category": "Zdraví",
+            "price": {
+                "value": "900",
+                "currency": "CZK"
+            },
+            "duration": {
+                "value": "45",
+                "unit": "minutes"
+            },
+            "availability": "Na objednávku",
+            "priority": "Standardní"
+        },
+        {
+            "id": "4",
+            "name": "Diabetolog",
+            "category": "Zdraví",
+            "price": {
+                "value": "1100",
+                "currency": "CZK"
+            },
+            "duration": {
+                "value": "90",
+                "unit": "minutes"
+            },
+            "availability": "Volné termíny",
+            "priority": "Prémiová"
+        },
+        {
+            "id": "5",
+            "name": "Kardiologie",
+            "category": "Zdraví",
+            "price": {
+                "value": "1500",
+                "currency": "CZK"
+            },
+            "duration": {
+                "value": "60",
+                "unit": "minutes"
+            },
+            "availability": "Na objednávku",
+            "priority": "Prémiová"
+        }
+    ]
+}
