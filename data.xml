@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="transformation.xslt"?>
+<?xml-stylesheet type="text/xslt" href="transformation.xslt"?>
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:noNamespaceSchemaLocation="transformation.xsd">
+          xsi:noNamespaceSchemaLocation="schema.xsd">
 
     <service>
         <id>1</id>
