@@ -3,52 +3,94 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="schema.xsd">
 
-    <service>
-        <id>1</id>
-        <name>Nutriční terapeut</name>
-        <details>
-            <category>Zdraví</category>
-            <price currency="CZK">800</price>
-            <duration unit="minutes">60</duration>
-            <availability>Volné termíny</availability>
-            <specialization>Nutriční poradenství</specialization>
-            <rating>4.8</rating>
-            <location>
-                <city>Praha</city>
-                <street>Ulice zdraví 1</street>
-            </location>
-        </details>
-    </service>
-    <service>
-        <id>2</id>
-        <name>Fyzioterapie</name>
-        <details>
-            <category>Rehabilitace</category>
-            <price currency="CZK">1000</price>
-            <duration unit="minutes">45</duration>
-            <availability>Objednání nutné</availability>
-            <specialization>Ortopedie</specialization>
-            <rating>4.5</rating>
-            <location>
-                <city>Brno</city>
-                <street>Ulice pohybu 2</street>
-            </location>
-        </details>
-    </service>
-    <service>
-        <id>3</id>
-        <name>Psychologické poradenství</name>
-        <details>
-            <category>Psychologie</category>
-            <price currency="CZK">1200</price>
-            <duration unit="minutes">50</duration>
-            <availability>Každý pátek</availability>
-            <specialization>Klinická psychologie</specialization>
-            <rating>5.0</rating>
-            <location>
-                <city>Ostrava</city>
-                <street>Duhová 33</street>
-            </location>
-        </details>
-    </service>
+  <service id="1" type="poradenstvi">
+    <name>Nutriční poradenství</name>
+    <details>
+      <category>Zdraví</category>
+      <duration unit="minutes">60</duration>
+      <price currency="CZK">850</price>
+      <specialist>
+        <name>Mgr. Alena Krásná</name>
+        <experience years="6">Výživa a metabolismus</experience>
+      </specialist>
+      <location>
+        <city>Praha</city>
+        <street>Ulice zdraví 1</street>
+        <room number="105">Konzultace A</room>
+      </location>
+    </details>
+  </service>
+
+  <service id="2" type="rehabilitace">
+    <name>Fyzioterapie</name>
+    <details>
+      <category>Pohyb</category>
+      <duration unit="minutes">45</duration>
+      <price currency="CZK">950</price>
+      <specialist>
+        <name>Bc. Tomáš Dvořák</name>
+        <experience years="10">Ortopedická fyzioterapie</experience>
+      </specialist>
+      <location>
+        <city>Brno</city>
+        <street>Ulice pohybu 2</street>
+        <room number="203">Rehab B</room>
+      </location>
+    </details>
+  </service>
+
+  <service id="3" type="diagnostika">
+    <name>Základní diagnostika</name>
+    <details>
+      <category>Preventivní péče</category>
+      <duration unit="minutes">30</duration>
+      <price currency="CZK">500</price>
+      <specialist>
+        <name>MUDr. Jitka Benešová</name>
+        <experience years="12">Interna</experience>
+      </specialist>
+      <location>
+        <city>Plzeň</city>
+        <street>Diagnostická 5</street>
+        <room number="101">Diagnostika C</room>
+      </location>
+    </details>
+  </service>
+
+  <service id="4" type="psychologie">
+    <name>Psychologické poradenství</name>
+    <details>
+      <category>Psychologie</category>
+      <duration unit="minutes">50</duration>
+      <price currency="CZK">1200</price>
+      <specialist>
+        <name>PhDr. Eva Novotná</name>
+        <experience years="8">Dospělí a dospívající</experience>
+      </specialist>
+      <location>
+        <city>Ostrava</city>
+        <street>Duhová 33</street>
+        <room number="310">Konzultace D</room>
+      </location>
+    </details>
+  </service>
+
+  <service id="5" type="poradenstvi">
+    <name>Kardiologická kontrola</name>
+    <details>
+      <category>Interní</category>
+      <duration unit="minutes">40</duration>
+      <price currency="CZK">1100</price>
+      <specialist>
+        <name>MUDr. Jan Zelený</name>
+        <experience years="15">Kardiologie</experience>
+      </specialist>
+      <location>
+        <city>Liberec</city>
+        <street>Srdcová 8</street>
+        <room number="210">Kardiologie E</room>
+      </location>
+    </details>
+  </service>
+
 </services>

@@ -1,79 +1,151 @@
+
 {
     "services": [
+      
         {
-            "id": "3",
-            "name": "Masáže",
-            "category": "Relaxace",
-            "price": {
-                "value": "600",
-                "currency": "CZK"
-            },
-            "duration": {
-                "value": "60",
-                "unit": "minutes"
-            },
-            "availability": "Na skladě",
-            "priority": "Standardní"
+          "id": "2",
+          "type": "rehabilitace",
+          "name": "Fyzioterapie",
+          "category": "Pohyb",
+          "duration": {
+            "value": "45",
+            "unit": "minutes"
+          },
+          "price": {
+            "value": "950",
+            "currency": "CZK"
+          },
+          "specialist": {
+            "name": "Bc. Tomáš Dvořák",
+            "experience": {
+              "years": "10",
+              "field": "Ortopedická fyzioterapie"
+            }
+          },
+          "location": {
+            "city": "Brno",
+            "street": "Ulice pohybu 2",
+            "room": {
+              "number": "203",
+              "name": "Rehab B"
+            }
+          }
         },
         {
-            "id": "1",
-            "name": "Nutriční terapeut",
-            "category": "Zdraví",
-            "price": {
-                "value": "800",
-                "currency": "CZK"
-            },
-            "duration": {
-                "value": "60",
-                "unit": "minutes"
-            },
-            "availability": "Volné termíny",
-            "priority": "Standardní"
+          "id": "5",
+          "type": "poradenstvi",
+          "name": "Kardiologická kontrola",
+          "category": "Interní",
+          "duration": {
+            "value": "40",
+            "unit": "minutes"
+          },
+          "price": {
+            "value": "1100",
+            "currency": "CZK"
+          },
+          "specialist": {
+            "name": "MUDr. Jan Zelený",
+            "experience": {
+              "years": "15",
+              "field": "Kardiologie"
+            }
+          },
+          "location": {
+            "city": "Liberec",
+            "street": "Srdcová 8",
+            "room": {
+              "number": "210",
+              "name": "Kardiologie E"
+            }
+          }
         },
         {
-            "id": "2",
-            "name": "Fyzioterapeut",
-            "category": "Zdraví",
-            "price": {
-                "value": "900",
-                "currency": "CZK"
-            },
-            "duration": {
-                "value": "45",
-                "unit": "minutes"
-            },
-            "availability": "Na objednávku",
-            "priority": "Standardní"
+          "id": "1",
+          "type": "poradenstvi",
+          "name": "Nutriční poradenství",
+          "category": "Zdraví",
+          "duration": {
+            "value": "60",
+            "unit": "minutes"
+          },
+          "price": {
+            "value": "850",
+            "currency": "CZK"
+          },
+          "specialist": {
+            "name": "Mgr. Alena Krásná",
+            "experience": {
+              "years": "6",
+              "field": "Výživa a metabolismus"
+            }
+          },
+          "location": {
+            "city": "Praha",
+            "street": "Ulice zdraví 1",
+            "room": {
+              "number": "105",
+              "name": "Konzultace A"
+            }
+          }
         },
         {
-            "id": "4",
-            "name": "Diabetolog",
-            "category": "Zdraví",
-            "price": {
-                "value": "1100",
-                "currency": "CZK"
-            },
-            "duration": {
-                "value": "90",
-                "unit": "minutes"
-            },
-            "availability": "Volné termíny",
-            "priority": "Prémiová"
+          "id": "4",
+          "type": "psychologie",
+          "name": "Psychologické poradenství",
+          "category": "Psychologie",
+          "duration": {
+            "value": "50",
+            "unit": "minutes"
+          },
+          "price": {
+            "value": "1200",
+            "currency": "CZK"
+          },
+          "specialist": {
+            "name": "PhDr. Eva Novotná",
+            "experience": {
+              "years": "8",
+              "field": "Dospělí a dospívající"
+            }
+          },
+          "location": {
+            "city": "Ostrava",
+            "street": "Duhová 33",
+            "room": {
+              "number": "310",
+              "name": "Konzultace D"
+            }
+          }
         },
         {
-            "id": "5",
-            "name": "Kardiologie",
-            "category": "Zdraví",
-            "price": {
-                "value": "1500",
-                "currency": "CZK"
-            },
-            "duration": {
-                "value": "60",
-                "unit": "minutes"
-            },
-            "availability": "Na objednávku",
-            "priority": "Prémiová"
+          "id": "3",
+          "type": "diagnostika",
+          "name": "Základní diagnostika",
+          "category": "Preventivní péče",
+          "duration": {
+            "value": "30",
+            "unit": "minutes"
+          },
+          "price": {
+            "value": "500",
+            "currency": "CZK"
+          },
+          "specialist": {
+            "name": "MUDr. Jitka Benešová",
+            "experience": {
+              "years": "12",
+              "field": "Interna"
+            }
+          },
+          "location": {
+            "city": "Plzeň",
+            "street": "Diagnostická 5",
+            "room": {
+              "number": "101",
+              "name": "Diagnostika C"
+            }
+          }
         }
     ]
-}
+  }
