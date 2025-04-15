@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/xslt" href="transfromation.xslt" />
 <html lang="cs">
     <head>
         <meta charset="UTF-8" />
@@ -50,27 +49,6 @@
           <a href="#kontakt" class="btn primary">Objednat se</a>
         </div>
     </section>
-
-    <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Název služby</th>
-                        <th>Kategorie</th>
-                        <th>Cena</th>
-                        <th>Délka</th>
-                        <th>Dostupnost</th>
-                    </tr>
-                    <xsl:for-each select="data/service">
-                        <tr>
-                            <td><xsl:value-of select="id"/></td>
-                            <td><xsl:value-of select="name"/></td>
-                            <td><xsl:value-of select="details/category"/></td>
-                            <td><xsl:value-of select="details/price"/> <xsl:value-of select="details/price/@currency"/></td>
-                            <td><xsl:value-of select="details/duration"/> <xsl:value-of select="details/duration/@unit"/></td>
-                            <td><xsl:value-of select="details/availability"/></td>
-                        </tr>
-                    </xsl:for-each>
-                </table>
 ﻿
     <section id="onas">
         <div class="container">
