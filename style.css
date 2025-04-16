@@ -64,8 +64,9 @@ h2 {
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.sluzba h3 {
+h3 {
   color: #5cb85c;
+  margin: 5px 0px 10px 0px;
 }
 #oteviraci-doba ul {
   list-style: none;
@@ -77,8 +78,7 @@ h2 {
 .contact-form label {
   font-weight: bold;
 }
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
