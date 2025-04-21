@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <!-- Hlavní kořen -->
   <xs:element name="services">
     <xs:complexType>
       <xs:sequence>
@@ -15,7 +16,7 @@
                     <xs:element name="duration">
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="xs:positiveInteger">
+                          <xs:extension base="durationType">
                             <xs:attribute name="unit" type="xs:string" use="required"/>
                           </xs:extension>
                         </xs:simpleContent>
@@ -24,7 +25,7 @@
                     <xs:element name="price">
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="xs:decimal">
+                          <xs:extension base="priceType">
                             <xs:attribute name="currency" type="xs:string" use="required"/>
                           </xs:extension>
                         </xs:simpleContent>
@@ -38,11 +39,15 @@
                             <xs:complexType>
                               <xs:simpleContent>
                                 <xs:extension base="xs:string">
-                                  <xs:attribute name="years" type="xs:positiveInteger" use="required"/>
+                                  <xs:attribute name="years" type="yearsType" use="required"/>
                                 </xs:extension>
                               </xs:simpleContent>
                             </xs:complexType>
                           </xs:element>
+                          <xs:element name="email" type="xs:string"/>
+                          <xs:element name="phone" type="xs:string"/>
+                          <xs:element name="available" type="xs:boolean"/>
+                          <xs:element name="language" type="xs:string"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -55,7 +60,9 @@
                             <xs:complexType>
                               <xs:simpleContent>
                                 <xs:extension base="xs:string">
-                                  <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
+                                  <xs:attribute name="number" type="xs:string" use="required"/>
+                                  <xs:attribute name="floor" type="xs:integer"/>
+                                  <xs:attribute name="wing" type="xs:string"/>
                                 </xs:extension>
                               </xs:simpleContent>
                             </xs:complexType>
@@ -63,25 +70,203 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                    <xs:element name="notes" type="xs:string" minOccurs="0"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-            <xs:attribute name="type" use="required">
-              <xs:simpleType>
-                <xs:restriction base="xs:string">
-                  <xs:enumeration value="poradenstvi"/>
-                  <xs:enumeration value="rehabilitace"/>
-                  <xs:enumeration value="diagnostika"/>
-                  <xs:enumeration value="psychologie"/>
-                </xs:restriction>
-              </xs:simpleType>
-            </xs:attribute>
+            <xs:attribute name="type" type="xs:string" use="required"/>
+            <xs:attribute name="recommended" type="xs:boolean"/>
+            <xs:attribute name="online" type="xs:boolean"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <!-- Restrikce 1: maximální cena -->
+  <xs:simpleType name="priceType">
+    <xs:restriction base="xs:decimal">
+      <xs:maxInclusive value="2000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Restrikce 2: roky praxe (0–50 let) -->
+  <xs:simpleType name="yearsType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Restrikce 3: délka trvání pouze některé hodnoty -->
+  <xs:simpleType name="durationType">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="30"/>
+      <xs:enumeration value="45"/>
+      <xs:enumeration value="50"/>
+      <xs:enumeration value="60"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Restrikce 4: typ služby -->
+  <xs:simpleType name="typeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="poradenstvi"/>
+      <xs:enumeration value="rehabilitace"/>
+      <xs:enumeration value="diagnostika"/>
+      <xs:enumeration value="psychologie"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Restrikce 5: emailový formát (zjednodušený) -->
+  <xs:simpleType name="emailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Dodatečné elementy inspirované zdravotní infrastrukturou -->
+
+  <xs:element name="clinicName" type="xs:string"/>
+  <xs:element name="insuranceAccepted" type="xs:boolean"/>
+  <xs:element name="maxPatientsPerDay" type="xs:positiveInteger"/>
+  <xs:element name="avgVisitDuration" type="xs:string"/>
+  <xs:element name="hasParking" type="xs:boolean"/>
+  <xs:element name="hasElevator" type="xs:boolean"/>
+  <xs:element name="covidSafetyLevel" type="xs:string"/>
+  <xs:element name="certifications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="certification" type="xs:string" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="departmentCode" type="xs:string"/>
+  <xs:element name="facilityRating" type="xs:decimal"/>
+  <xs:element name="openOnWeekends" type="xs:boolean"/>
+  <xs:element name="onlineConsultationLink" type="xs:anyURI"/>
+
+
+  <!-- Globální definice healthcareData pro validaci -->
+  <xs:element name="healthcareData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="providerRecord" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="provIdentifier"/>
+              <xs:element ref="provName"/>
+              <xs:element ref="provEstablishmentYear"/>
+              <xs:element ref="provRating"/>
+              <xs:element ref="provAddress"/>
+              <xs:element ref="provContacts"/>
+              <xs:element ref="provDepartments"/>
+              <xs:element ref="provServices"/>
+            </xs:sequence>
+            <xs:attribute name="provID" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="lang" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Chybějící deklarace ref-ovaných prvků -->
+<xs:element name="provIdentifier" type="xs:string"/>
+<xs:element name="provName" type="xs:string"/>
+<xs:element name="provEstablishmentYear" type="xs:integer"/>
+<xs:element name="provRating" type="xs:decimal"/>
+<xs:element name="provAddress">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="addrStreet" type="xs:string"/>
+      <xs:element name="addrCity" type="xs:string"/>
+      <xs:element name="addrState" type="xs:string"/>
+      <xs:element name="addrPostal" type="xs:string"/>
+      <xs:element name="addrCountry" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+
+<!-- provContacts -->
+<xs:element name="provContacts">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="contactPhone" type="xs:string"/>
+      <xs:element name="contactEmail">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="verified" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="contactWebsite">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="websiteType" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<!-- provDepartments -->
+<xs:element name="provDepartments">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="deptRecord" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="deptName" type="xs:string"/>
+            <xs:element name="deptHead" type="xs:string"/>
+            <xs:element name="deptPhone" type="xs:string"/>
+            <xs:element name="deptLocation" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="deptID" type="xs:string" use="required"/>
+          <xs:attribute name="deptFloor" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<!-- provServices -->
+<xs:element name="provServices">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="servRecord" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="servName" type="xs:string"/>
+            <xs:element name="servDesc" type="xs:string"/>
+            <xs:element name="servFee">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="feeCurrency" type="xs:string" use="optional"/>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="servDuration" type="xs:string"/>
+            <xs:element name="servType" type="xs:string"/>
+            <xs:element name="servAvailability" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="servID" type="xs:string" use="required"/>
+          <xs:attribute name="serviceStatus" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
 
 </xs:schema>

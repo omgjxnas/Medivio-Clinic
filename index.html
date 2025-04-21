@@ -24,6 +24,8 @@
     <meta itemprop="telephone" content="+420 123 456 789" />
     <meta itemprop="email" content="info@medivio.cz" />
     <meta itemprop="url" content="https://medivio.cz" />
+    <meta itemprop="image" content="https://medivio.cz/assets/og-image.jpg" />
+    <meta itemprop="founder" content="Jonáš Podzemský, Adam Suk" />
   </head>
 
   <body>
@@ -56,6 +58,9 @@
             <figcaption>Moderní prostředí v Medivio Clinic</figcaption>
           </figure>
         </article>
+        <aside class="notice">
+          <p><strong>Novinka:</strong> Otevíráme novou pobočku v Brně už v červnu 2025!</p>
+        </aside>
       </div>
     </section>
 
@@ -98,9 +103,11 @@
         
         <div class="contact-details">
           <h3>Kontaktní informace</h3>
-          <p><strong>Adresa:</strong> Ulice 123, 100 00 Praha</p>
-          <p><strong>Telefon:</strong> <a href="tel:+420123456789">+420 123 456 789</a></p>
-          <p><strong>E-mail:</strong> <a href="mailto:info@medivio.cz">info@medivio.cz</a></p>
+          <address itemscope itemtype="https://schema.org/PostalAddress">
+            <p><strong>Adresa:</strong> <span itemprop="streetAddress">Ulice 123</span>, <span itemprop="postalCode">100 00</span> <span itemprop="addressLocality">Praha</span></p>
+            <p><strong>Telefon:</strong> <a href="tel:+420123456789" itemprop="telephone">+420 123 456 789</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:info@medivio.cz" itemprop="email">info@medivio.cz</a></p>
+          </address>
         </div>
 
         <div class="contact-formular">

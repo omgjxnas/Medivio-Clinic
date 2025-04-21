@@ -7,11 +7,15 @@
     <name>Nutriční poradenství</name>
     <details>
       <category>Zdraví</category>
-      <duration unit="minutes">60</duration>
+      <duration unit="minutes">50</duration>
       <price currency="CZK">850</price>
       <specialist>
         <name>Mgr. Alena Krásná</name>
         <experience years="6">Výživa a metabolismus</experience>
+        <email>alena.krasna@medivio.cz</email>
+        <phone>+420 123 456 789</phone>
+        <available>true</available>
+        <language>cz</language>
       </specialist>
       <location>
         <city>Praha</city>
@@ -30,6 +34,10 @@
       <specialist>
         <name>Bc. Tomáš Dvořák</name>
         <experience years="10">Ortopedická fyzioterapie</experience>
+        <email>tomasdvorak@medivio.cz</email>
+        <phone>+420 183 456 789</phone>
+        <available>true</available>
+        <language>en</language>
       </specialist>
       <location>
         <city>Brno</city>
@@ -43,11 +51,15 @@
     <name>Základní diagnostika</name>
     <details>
       <category>Preventivní péče</category>
-      <duration unit="minutes">30</duration>
+      <duration unit="minutes">50</duration>
       <price currency="CZK">500</price>
       <specialist>
         <name>MUDr. Jitka Benešová</name>
         <experience years="12">Interna</experience>
+        <email>jitkabenesova@medivio.cz</email>
+        <phone>+420 223 456 789</phone>
+        <available>true</available>
+        <language>cz</language>
       </specialist>
       <location>
         <city>Plzeň</city>
@@ -66,6 +78,10 @@
       <specialist>
         <name>PhDr. Eva Novotná</name>
         <experience years="8">Dospělí a dospívající</experience>
+        <email>eva.novotna@medivio.cz</email>
+        <phone>+420 125 456 789</phone>
+        <available>true</available>
+        <language>en</language>
       </specialist>
       <location>
         <city>Ostrava</city>
@@ -79,11 +95,15 @@
     <name>Kardiologická kontrola</name>
     <details>
       <category>Interní</category>
-      <duration unit="minutes">40</duration>
+      <duration unit="minutes">45</duration>
       <price currency="CZK">1100</price>
       <specialist>
         <name>MUDr. Jan Zelený</name>
         <experience years="15">Kardiologie</experience>
+        <email>janzeleny@medivio.cz</email>
+        <phone>+420 143 456 789</phone>
+        <available>true</available>
+        <language>cz</language>
       </specialist>
       <location>
         <city>Liberec</city>
