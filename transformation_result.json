@@ -1,151 +1,169 @@
-
 {
-    "services": [
-      
-        {
-          "id": "2",
-          "type": "rehabilitace",
-          "name": "Fyzioterapie",
-          "category": "Pohyb",
-          "duration": {
-            "value": "45",
-            "unit": "minutes"
-          },
-          "price": {
-            "value": "950",
-            "currency": "CZK"
-          },
-          "specialist": {
-            "name": "Bc. Tomáš Dvořák",
-            "experience": {
-              "years": "10",
-              "field": "Ortopedická fyzioterapie"
-            }
-          },
-          "location": {
-            "city": "Brno",
-            "street": "Ulice pohybu 2",
-            "room": {
-              "number": "203",
-              "name": "Rehab B"
-            }
-          }
-        },
-        {
-          "id": "5",
-          "type": "poradenstvi",
-          "name": "Kardiologická kontrola",
-          "category": "Interní",
-          "duration": {
-            "value": "40",
-            "unit": "minutes"
-          },
-          "price": {
-            "value": "1100",
-            "currency": "CZK"
-          },
-          "specialist": {
-            "name": "MUDr. Jan Zelený",
-            "experience": {
-              "years": "15",
-              "field": "Kardiologie"
-            }
-          },
-          "location": {
-            "city": "Liberec",
-            "street": "Srdcová 8",
-            "room": {
-              "number": "210",
-              "name": "Kardiologie E"
-            }
-          }
-        },
-        {
-          "id": "1",
-          "type": "poradenstvi",
-          "name": "Nutriční poradenství",
-          "category": "Zdraví",
-          "duration": {
-            "value": "60",
-            "unit": "minutes"
-          },
-          "price": {
-            "value": "850",
-            "currency": "CZK"
-          },
-          "specialist": {
-            "name": "Mgr. Alena Krásná",
-            "experience": {
-              "years": "6",
-              "field": "Výživa a metabolismus"
-            }
-          },
-          "location": {
-            "city": "Praha",
-            "street": "Ulice zdraví 1",
-            "room": {
-              "number": "105",
-              "name": "Konzultace A"
-            }
-          }
-        },
-        {
-          "id": "4",
-          "type": "psychologie",
-          "name": "Psychologické poradenství",
-          "category": "Psychologie",
-          "duration": {
-            "value": "50",
-            "unit": "minutes"
-          },
-          "price": {
-            "value": "1200",
-            "currency": "CZK"
-          },
-          "specialist": {
-            "name": "PhDr. Eva Novotná",
-            "experience": {
-              "years": "8",
-              "field": "Dospělí a dospívající"
-            }
-          },
-          "location": {
-            "city": "Ostrava",
-            "street": "Duhová 33",
-            "room": {
-              "number": "310",
-              "name": "Konzultace D"
-            }
-          }
-        },
-        {
-          "id": "3",
-          "type": "diagnostika",
-          "name": "Základní diagnostika",
-          "category": "Preventivní péče",
-          "duration": {
-            "value": "30",
-            "unit": "minutes"
-          },
-          "price": {
-            "value": "500",
-            "currency": "CZK"
-          },
-          "specialist": {
-            "name": "MUDr. Jitka Benešová",
-            "experience": {
-              "years": "12",
-              "field": "Interna"
-            }
-          },
-          "location": {
-            "city": "Plzeň",
-            "street": "Diagnostická 5",
-            "room": {
-              "number": "101",
-              "name": "Diagnostika C"
-            }
-          }
+  "services": [
+    {
+      "id": "2",
+      "type": "rehabilitace",
+      "name": "Fyzioterapie",
+      "category": "Pohyb",
+      "duration": {
+        "value": "45",
+        "unit": "minutes"
+      },
+      "price": {
+        "value": "950",
+        "currency": "CZK"
+      },
+      "specialist": {
+        "name": "Bc. Tomáš Dvořák",
+        "email": "tomasdvorak@medivio.cz",
+        "phone": "+420 183 456 789",
+        "available": true,
+        "language": "en",
+        "experience": {
+          "years": "10",
+          "field": "Ortopedická fyzioterapie"
         }
-    ]
-  }
+      },
+      "location": {
+        "city": "Brno",
+        "street": "Ulice pohybu 2",
+        "room": {
+          "number": "203",
+          "name": "Rehab B"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "type": "poradenstvi",
+      "name": "Kardiologická kontrola",
+      "category": "Interní",
+      "duration": {
+        "value": "45",
+        "unit": "minutes"
+      },
+      "price": {
+        "value": "1100",
+        "currency": "CZK"
+      },
+      "specialist": {
+        "name": "MUDr. Jan Zelený",
+        "email": "janzeleny@medivio.cz",
+        "phone": "+420 143 456 789",
+        "available": true,
+        "language": "cz",
+        "experience": {
+          "years": "15",
+          "field": "Kardiologie"
+        }
+      },
+      "location": {
+        "city": "Liberec",
+        "street": "Srdcová 8",
+        "room": {
+          "number": "210",
+          "name": "Kardiologie E"
+        }
+      }
+    },
+    {
+      "id": "1",
+      "type": "poradenstvi",
+      "name": "Nutriční poradenství",
+      "category": "Zdraví",
+      "duration": {
+        "value": "50",
+        "unit": "minutes"
+      },
+      "price": {
+        "value": "850",
+        "currency": "CZK"
+      },
+      "specialist": {
+        "name": "Mgr. Alena Krásná",
+        "email": "alena.krasna@medivio.cz",
+        "phone": "+420 123 456 789",
+        "available": true,
+        "language": "cz",
+        "experience": {
+          "years": "6",
+          "field": "Výživa a metabolismus"
+        }
+      },
+      "location": {
+        "city": "Praha",
+        "street": "Ulice zdraví 1",
+        "room": {
+          "number": "105",
+          "name": "Konzultace A"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "type": "psychologie",
+      "name": "Psychologické poradenství",
+      "category": "Psychologie",
+      "duration": {
+        "value": "50",
+        "unit": "minutes"
+      },
+      "price": {
+        "value": "1200",
+        "currency": "CZK"
+      },
+      "specialist": {
+        "name": "PhDr. Eva Novotná",
+        "email": "eva.novotna@medivio.cz",
+        "phone": "+420 125 456 789",
+        "available": true,
+        "language": "en",
+        "experience": {
+          "years": "8",
+          "field": "Dospělí a dospívající"
+        }
+      },
+      "location": {
+        "city": "Ostrava",
+        "street": "Duhová 33",
+        "room": {
+          "number": "310",
+          "name": "Konzultace D"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "type": "diagnostika",
+      "name": "Základní diagnostika",
+      "category": "Preventivní péče",
+      "duration": {
+        "value": "50",
+        "unit": "minutes"
+      },
+      "price": {
+        "value": "500",
+        "currency": "CZK"
+      },
+      "specialist": {
+        "name": "MUDr. Jitka Benešová",
+        "email": "jitkabenesova@medivio.cz",
+        "phone": "+420 223 456 789",
+        "available": true,
+        "language": "cz",
+        "experience": {
+          "years": "12",
+          "field": "Interna"
+        }
+      },
+      "location": {
+        "city": "Plzeň",
+        "street": "Diagnostická 5",
+        "room": {
+          "number": "101",
+          "name": "Diagnostika C"
+        }
+      }
+    }
+  ]
+}
